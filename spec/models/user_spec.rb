@@ -145,10 +145,10 @@ describe User do
       it "should return nil for user without email address" do
         User.authenticate("foo@bar.com", @attr[:password]).should be_nil
       end
-      
+
       it "should return valid user on email/password match" do
         User.authenticate(@attr[:email], @attr[:password]).should == @user
-         
+
       end
 
     end
